@@ -8,16 +8,16 @@ var format = d3.time.format("%m/%d/%Y");
 //var dateFn = function(date) { return format.parse(d.created_at) };
 
 var sub_data = [
-    { "ID": 'Subject1', "GENDER": "M", "DOB": "12/4/1980", "R SCORE": 90, "SYMPTOMATIC": true},
-    { "ID": 'Subject2', "GENDER": "F", "DOB": "10/23/1981", "R SCORE": 122, "SYMPTOMATIC": false},
-    { "ID": 'Subject3', "GENDER": "M", "DOB": "1/12/1980", "R SCORE": 112, "SYMPTOMATIC": false},
-    { "ID": 'Subject4', "GENDER": "M", "DOB": "4/23/1982", "R SCORE": 125, "SYMPTOMATIC": false},
-    { "ID": 'Subject6', "GENDER": "M", "DOB": "8/25/1979", "R SCORE": 109, "SYMPTOMATIC": false},
-    { "ID": 'Subject5', "GENDER": "F", "DOB": "10/26/1983", "R SCORE": 97, "SYMPTOMATIC": true},
-    { "ID": 'Subject7', "GENDER": "M", "DOB": "9/4/1980", "R SCORE": 118, "SYMPTOMATIC": false},
-    { "ID": 'Subject9', "GENDER": "F", "DOB": "6/22/1980", "R SCORE": 95, "SYMPTOMATIC": false},
-    { "ID": 'Subject8', "GENDER": "M", "DOB": "2/14/1983", "R SCORE": 87, "SYMPTOMATIC": true},
-    { "ID": 'Subject0', "GENDER": "F", "DOB": "11/3/1982", "R SCORE": 115, "SYMPTOMATIC": false}
+    { "ID": 'Cluster_01', "Cluster_Size": "M", "IFOF": "12/4/1980", "Uncinate": 90, "SLF_tp": true},
+    { "ID": 'Cluster_02', "Cluster_Size": "F", "IFOF": "10/23/1981", "Uncinate": 122, "SLF_tp": false},
+    { "ID": 'Cluster_03', "Cluster_Size": "M", "IFOF": "1/12/1980", "Uncinate": 112, "SLF_tp": false},
+    { "ID": 'Cluster_04', "Cluster_Size": "M", "IFOF": "4/23/1982", "Uncinate": 125, "SLF_tp": false},
+    { "ID": 'Cluster_05', "Cluster_Size": "M", "IFOF": "8/25/1979", "Uncinate": 109, "SLF_tp": false},
+    { "ID": 'Cluster_06', "Cluster_Size": "F", "IFOF": "10/26/1983", "Uncinate": 97, "SLF_tp": true},
+    { "ID": 'Cluster_07', "Cluster_Size": "M", "IFOF": "9/4/1980", "Uncinate": 118, "SLF_tp": false},
+    { "ID": 'Cluster_08', "Cluster_Size": "F", "IFOF": "6/22/1980", "Uncinate": 95, "SLF_tp": false},
+    { "ID": 'Cluster_09', "Cluster_Size": "M", "IFOF": "2/14/1983", "Uncinate": 87, "SLF_tp": true},
+    { "ID": 'Cluster_10', "Cluster_Size": "F", "IFOF": "11/3/1982", "Uncinate": 115, "SLF_tp": false}
 ];
 
 var table_svg = d3.select("#table").append("svg")
@@ -59,6 +59,7 @@ function refreshTable(sortOn){
         function(d){ return d.ID; });
 
     // create rows
+    console.log()
     var rowsEnter = rows.enter().append("svg:g")
         .attr("class","row")
         .attr("id", function(d){ return d.ID; })
