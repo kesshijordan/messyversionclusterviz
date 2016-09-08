@@ -1,8 +1,8 @@
 //tracklist js
 
 //Data : track names
-console.log('hello, my world!!!')
-var tracks=["NExpectCluster 1","Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9", "Cluster 10" ]
+console.log('huh?')
+var tracks=["NOTExpectingthisCluster 1","Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9", "Cluster 10" ]
 // color Palettes in Hex format, HTML needs colors in d3colors format
 // colors are the Tableau20 colors
 var colors = [0x1F77B4, 0xAEC7E8, 0xFF7F0E, 0xFFBB78, 0x2CA02C, 0x98DF8A, 0xD62728, 0xFF9896, 0x9467BD, 0xC5B0D5, 0x8C564B, 0xC49C94, 0xE377C2, 0xF7B6D2, 0x7F7F7F, 0xC7C7C7, 0xBCBD22, 0xDBDB8D, 0x17BECF, 0x9EDAE5];
@@ -177,7 +177,7 @@ function init() {
                 child.material.opacity = lineInitialOpacity;
                 child.material.transparent = true;
                 child.position.set(0, 0.8, -0.5);
-
+                // these are the LISTENERS that fire on an EVENT
                 domEvents.addEventListener(child, 'mouseover', function(event) {
         					if(!mouseDown) {
 								mouseoverBundle(child.idx);
@@ -187,6 +187,8 @@ function init() {
                 domEvents.addEventListener(child, 'mousemove', function(event) {
         					mouseMove = true;
         				});
+
+        		// this is a listener for the CLICK event:
                 domEvents.addEventListener(child, 'mousedown', function(event) {
         					mouseMove = false;
         				});
@@ -195,6 +197,8 @@ function init() {
         						var myBundle = d3.selectAll("input.tracks")[0][child.idx];
         						myBundle.checked = !myBundle.checked;
         						showHideTrackDetails(myBundle.checked, myBundle.name)
+        						// Lets say you want to hide the bundle on click -- try replacing
+        						// highlightBundle w/ a function that hides the bundle
         						highlightBundle(myBundle.checked, myBundle.name)
         						return renderer.render(scene, camera);
         					} else {
