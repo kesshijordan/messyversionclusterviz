@@ -139,9 +139,10 @@ function init() {
     // contain all bundles in this Group object
     // each bundle is represented by an Object3D
     // load fiber bundle using jQuery
-    //example: 0 and 1 Unc; 2 and 4 IFOF
+    //example: Unc 0 and 1; IFOF 2 and 4
+    //example: Arc  5ish
 	var bundleIdx = 0;
-    $.getJSON("data/tier_1_4.json", function(json) {
+    $.getJSON("data/tier_0.json", function(json) {
         for (var key in json) {
             if (json.hasOwnProperty(key)) {
                 var oneBundle = json[key];
@@ -274,6 +275,37 @@ function highlightBundle(state, name) {
 			return renderer.render(scene, camera);
 
 		} else {
+			bundle.material = line_material;
+			return renderer.render(scene, camera);
+		}
+	}
+}
+
+// func to HIDE specified bundle based on left panel checkboxes
+function hideBundle(state, name) {
+
+	var tem_line_material = new THREE.LineBasicMaterial({
+		opacity: 0,
+		linewidth: 2.5,
+        transparent: true
+	});
+
+	var tem_line_material2 = new THREE.LineBasicMaterial({
+		opacity: 1,
+		linewidth: 2.5,
+        transparent: true
+	});
+
+	bundle = groups.children[name];
+
+	if (bundle !== undefined) {
+		if (state === true) {
+			tem_line_material.color.setHex( colors[name] );
+			bundle.material = tem_line_material;
+			return renderer.render(scene, camera);
+
+		} else {
+
 			bundle.material = line_material;
 			return renderer.render(scene, camera);
 		}

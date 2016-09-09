@@ -8,16 +8,16 @@ var format = d3.time.format("%m/%d/%Y");
 //var dateFn = function(date) { return format.parse(d.created_at) };
 
 var sub_data = [
-    { "ID": 'Cluster_01', "Cluster_Size": "M", "IFOF": "12/4/1980", "Uncinate": 90, "SLF_tp": true},
-    { "ID": 'Cluster_02', "Cluster_Size": "F", "IFOF": "10/23/1981", "Uncinate": 122, "SLF_tp": false},
-    { "ID": 'Cluster_03', "Cluster_Size": "M", "IFOF": "1/12/1980", "Uncinate": 112, "SLF_tp": false},
-    { "ID": 'Cluster_04', "Cluster_Size": "M", "IFOF": "4/23/1982", "Uncinate": 125, "SLF_tp": false},
-    { "ID": 'Cluster_05', "Cluster_Size": "M", "IFOF": "8/25/1979", "Uncinate": 109, "SLF_tp": false},
-    { "ID": 'Cluster_06', "Cluster_Size": "F", "IFOF": "10/26/1983", "Uncinate": 97, "SLF_tp": true},
-    { "ID": 'Cluster_07', "Cluster_Size": "M", "IFOF": "9/4/1980", "Uncinate": 118, "SLF_tp": false},
-    { "ID": 'Cluster_08', "Cluster_Size": "F", "IFOF": "6/22/1980", "Uncinate": 95, "SLF_tp": false},
-    { "ID": 'Cluster_09', "Cluster_Size": "M", "IFOF": "2/14/1983", "Uncinate": 87, "SLF_tp": true},
-    { "ID": 'Cluster_10', "Cluster_Size": "F", "IFOF": "11/3/1982", "Uncinate": 115, "SLF_tp": false}
+    { "ID": 'Cluster_01', "Cluster_Size": "100", "IFOF": 8, "Uncinate": 290, "SLF_tp": true},
+    { "ID": 'Cluster_02', "Cluster_Size": "90", "IFOF": 4, "Uncinate": 322, "SLF_tp": false},
+    { "ID": 'Cluster_03', "Cluster_Size": "70", "IFOF": 500, "Uncinate": 35, "SLF_tp": false},
+    { "ID": 'Cluster_04', "Cluster_Size": "66", "IFOF": 80, "Uncinate": 25, "SLF_tp": false},
+    { "ID": 'Cluster_05', "Cluster_Size": "58", "IFOF": 200, "Uncinate": 10, "SLF_tp": false},
+    { "ID": 'Cluster_06', "Cluster_Size": "42", "IFOF": 15, "Uncinate": 5, "SLF_tp": true},
+    { "ID": 'Cluster_07', "Cluster_Size": "31", "IFOF": 4, "Uncinate": 7, "SLF_tp": false},
+    { "ID": 'Cluster_08', "Cluster_Size": "25", "IFOF": 22, "Uncinate": 9, "SLF_tp": false},
+    { "ID": 'Cluster_09', "Cluster_Size": "17", "IFOF": 24, "Uncinate": 20, "SLF_tp": true},
+    { "ID": 'Cluster_10', "Cluster_Size": "8", "IFOF": 11, "Uncinate": 11, "SLF_tp": false}
 ];
 
 var table_svg = d3.select("#table").append("svg")

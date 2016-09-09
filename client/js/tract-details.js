@@ -101,6 +101,34 @@ d3.selectAll("#flipselectAllTracks")
 
   });
 
+// hide tracks that are off (instead of transparency)
+d3.selectAll("#hiderejectTracks")
+  .on("change", function () {
+      var state = this.checked;
+      console.log('hide reject')
+      //console.log(state)
+      if (state) {
+          d3.selectAll(".tracks").each(function (d, i) {
+              this.checked = !this.checked;
+              console.log('hide my state if')
+              console.log(state)
+              console.log(name)
+              //showHideTrackDetails(this.checked, this.name);
+              hideBundle(this.checked, this.name);
+          });
+      } else {
+          d3.selectAll(".tracks").each(function (d, i) {
+              this.checked = !this.checked;
+              console.log('hide my state else')
+              console.log(state)
+              console.log(name)
+              //showHideTrackDetails(this.checked, this.name);
+              hideBundle(this.checked, this.name);
+          });
+      }
+
+  });
+
 //MyFunction to
 
 //MyFunction to save confirm
