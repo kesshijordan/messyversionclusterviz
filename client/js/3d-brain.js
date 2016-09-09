@@ -248,6 +248,12 @@ function lightUpdate() {
     directionalLight.position.copy(camera.position);
 }
 
+// func to load json file tracks into viewer
+function loadjsontrks(myjsonfile) {
+
+}
+
+
 // func to highlight specified bundle based on left panel checkboxes
 function highlightBundle(state, name) {
 
