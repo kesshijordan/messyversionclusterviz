@@ -30,15 +30,23 @@
         <div id="title" class="col-5"><h2>Zoom in to Bundle</h2></div>
     </div>
     <div class="col-7">
-        <div class="col-10" id="title"><button type="button"> __FINER_CLUSTER__ </button><button type="button"> __COARSER_CLUSTER__ </button></div>
-        <div class="col-10" id="title"<h2>Cluster Level = X mm</h2></div>
-        <div class="col-10" id="title"><button type="button"> __SAVE__ </button></div>
+        <div class="col-10" id="title">
+            <button type="button" onclick="showClusterresFiner()"> __FINER_CLUSTER__ </button>
+            <button type="button" onclick="showClusterresCoarser()"> __COARSER_CLUSTER__ </button>
+        </div>
+        <div class="col-10" id="myspecialtitle"<h2>Cluster Level = 50 mm</h2></div>
+        <div class="col-10" id="title">
+            <button type="button" onclick=document.getElementById('modelsaveconfirm').style.display='block'> __SAVE_FASCICLE MODEL__ </button>
+            <p id="modelsaveconfirm" style="display:none">_____Fascicle model saved!</p>
+        </div>
+
         <div class="col-4" id="tracklist">
             <div id="selectAllBox"> <input type="checkbox" id="selectAllTracks"><br> <label for="selectAllTracks">ALL CLUSTERS</label></div>
         </div>
         <div class="col-4" id="tracklist">
-            <div id="selectAllBox"> <input type="checkbox" id="selectAllTracks"><br> <label for="selectAllTracks">TOGGLE CHOICE</label></div>
+            <div id="selectAllBox"> <input type="checkbox" id="flipselectAllTracks"><br> <label for="flipselectAllTracks">TOGGLE CHOICE</label></div>
         </div>
+
         <div class="col-8">
             <div class="col-12" id="threejsbrain"></div>
             <div class="moveGUI"></div>
