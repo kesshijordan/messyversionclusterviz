@@ -135,11 +135,13 @@ function init() {
 		})
 	});
 
+
     // contain all bundles in this Group object
     // each bundle is represented by an Object3D
     // load fiber bundle using jQuery
+    //example: 0 and 1 Unc; 2 and 4 IFOF
 	var bundleIdx = 0;
-    $.getJSON("data/data_partial.json", function(json) {
+    $.getJSON("data/tier_1_4.json", function(json) {
         for (var key in json) {
             if (json.hasOwnProperty(key)) {
                 var oneBundle = json[key];
