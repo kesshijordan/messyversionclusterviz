@@ -140,9 +140,9 @@ function init() {
     // each bundle is represented by an Object3D
     // load fiber bundle using jQuery
     //example: Unc 0 and 1; IFOF 2 and 4
-    //example: Arc  5ish
+    //example: Arc  3, 4, 5ish
 	var bundleIdx = 0;
-    $.getJSON("data/tier_0.json", function(json) {
+    $.getJSON("data/tier_1_4.json", function(json) {
         for (var key in json) {
             if (json.hasOwnProperty(key)) {
                 var oneBundle = json[key];
